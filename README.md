@@ -9,7 +9,7 @@ Copyright 2013: Jonathan Stark
 
 ## Project Goals
 
-To make it simple for web developers to add instantaneous visual feedback for touch interactions. 
+The goal of FastActive is to make it simple for web developers to add instantaneous visual feedback for touch interactions to their websites and web apps. 
 
 ## Features
 
