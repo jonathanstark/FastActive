@@ -1,15 +1,13 @@
 FastActive
 ==========
 
-FastActive is a javascript snippet that makes websites and web apps feel as responsive as native apps on touch devices. 
-
-In my expereince, a big reason that web apps feel slower than native is *not* that  that web based interfaces actually take longer to respond to user interaction, but that *they don't provide instant visual feedback to touch interactions.* 
+In my experience, a big reason that web apps feel slower than native is *not* that  that web based interfaces actually take longer to respond to user interaction, but that *they don't provide instant visual feedback to touch interactions.* 
 
 If you watch for it, you'll see that it's not uncommon to wait for a second or two for an action to complete in a native iOS app (e.g., tapping a list item in the Settings app, for example, can take a while to actually complete the navigation to the target screen). The difference, however, is that in a native app, the UI *instantly* lets the user know that the tap was registered by providing visual feedback. This has the effect of reassuring the user that "Yes, we received your request and are working on it as fast as we can." 
 
-Web develpers can remove the lag on touch interactions in web apps by listening for touch events, but trying to actually respond to touch events as if they were clicks is a huge amount of work and frought with xplat gotchas. I wanted to make a simple snippet that any n00b could slap into their markup that would create a native-like touch responsiveness without adding the complexity of jettisoning click events entirely. 
+Web developers can remove the lag on touch interactions in web apps by listening for touch events, but trying to actually respond to touch events as if they were clicks is a huge amount of work and fraught with xplat gotchas. I wanted to make a simple snippet that any n00b could slap into their markup that would create a native-like touch responsiveness without adding the complexity of jettisoning click events entirely. 
 
-Hence, FastActive. FastActive basiclly does one thing and one thing only: it toggles an active class name on whatever links the user touches. With that single hook, devs can write simple CSS that will provide instantaneous visual feedback to the user. 
+Hence, FastActive. FastActive basically does one thing and one thing only: it toggles an active class name on whatever links the user touches. With that single hook, devs can write simple CSS that will provide instantaneous visual feedback to the user. 
 
 To date, FastActive has been tested in two simple websites, one simple web app, and one complex web app, and the effect has been pretty dramatic. That said, I'd love to get your feedback, so please give it a try and log issues or send pull requests. 
 
@@ -27,7 +25,7 @@ The goal of FastActive is to make it simple for web developers to add instantane
 
 ## Features
 
-* Ultra-lightweight - way less than 1k minified.
+* Ultra-lightweight: way less than 1k minified.
 * MIT license: use it wherever you want.
 * Designed for responsive design: safe for use in cross-device development
 * Framework-independent: use with any JS library, or none at all!
@@ -42,7 +40,7 @@ Alternatively, you can just paste the FastActive source into a script tag at the
 
 Once you have added FastActive to your site, all it does is add a `active` class instantly (ontouchstart) to any tapped link. Therefore, you're going to want to make a couple changes to your CSS: 
 
-1. Disable default touch browser tap highights, like so:
+1. Disable default touch browser tap highlights, like so:
 
     ```
     a {
