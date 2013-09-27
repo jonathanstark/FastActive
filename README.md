@@ -24,11 +24,19 @@ To make it simple for web developers to add instantaneous visual feedback for to
 2. Link to your copy of FastActive.min.js just before the the closing body tag of your HTML pages. 
 3. There is no step 3!
 
-Alternatively, you can just paste the FastActive source into the a script tag at the bottom of your HTML pages to save yourself an HTTP request. 
+Alternatively, you can just paste the FastActive source into a script tag at the bottom of your HTML pages to save yourself an HTTP request. 
 
-Once you have added FastActive to your site, you're going to want to make two changes to your CSS: 
+Once you have added FastActive to your site, all it does is add a `active` class instantly (ontouchstart) to any tapped link. Therefore, you're going to want to make a couple changes to your CSS: 
 
-1. Add distinct visual styles for any `a.active` elements, like so:
+1. Disable default touch browser tap highights, like so:
+
+    ```
+    a {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    ```
+
+2. Add distinct visual styles for any `a.active` elements, like so:
 
     ```
     a.active {
@@ -37,13 +45,7 @@ Once you have added FastActive to your site, you're going to want to make two ch
     }
     ```
     
-2. Disable default touch browser tap highights, like so:
-
-    ```
-    a {
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-    }
-    ```
+__NOTE:__ You can change the class name from the default of `active` to whatever you like by editing the second param passed into the immediately invoked function expression (see the last line of the unminified snippet).
 
 ## More Info
 
