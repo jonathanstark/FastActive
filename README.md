@@ -26,6 +26,25 @@ To make it simple for web developers to add instantaneous visual feedback for to
 
 Alternatively, you can just paste the FastActive source into the a script tag at the bottom of your HTML pages to save yourself an HTTP request. 
 
+Once you have added FastActive to your site, you're going to want to make two changes to your CSS: 
+
+1. Add distinct visual styles for any `a.active` elements, like so:
+
+    ```
+    a.active {
+        background-color: magenta;
+        color: white;
+    }
+    ```
+    
+2. Disable default touch browser tap highights, like so:
+
+    ```
+    a {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    ```
+
 ## More Info
 
 For more info about the reasoning behind FastActive, please listen to [Episode 76 of the Nitch Podcast](http://nitch.cc/podcast/episode-76-tickle-class).
