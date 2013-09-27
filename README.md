@@ -1,7 +1,7 @@
 FastActive
 ==========
 
-FastActive is a javascript snippet that makes websites and web apps *feel* fast on touch devices. 
+FastActive is a javascript snippet that makes websites and web apps feel as fast as native apps on touch devices. 
 
 License: Open-source MIT license
 
