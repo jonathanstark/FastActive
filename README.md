@@ -62,3 +62,4 @@ __NOTE:__ You can change the class name from the default of `active` to whatever
 ## More Info
 
 For more info about the reasoning behind FastActive, please listen to [Episode 76 of the Nitch Podcast](http://nitch.cc/podcast/episode-76-tickle-class).
+
