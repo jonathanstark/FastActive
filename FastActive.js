@@ -13,5 +13,5 @@
         }
     }
     d.body.addEventListener("touchstart", setActive, false);
-    d.body.addEventListener("touchmove", clearActive, false);
+    // d.body.addEventListener("touchmove", clearActive, false);
 })(document, "active");
