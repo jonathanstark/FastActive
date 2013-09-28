@@ -12,6 +12,6 @@
             e.target.classList.add(activeClass);
         }
     }
-    d.body.addEventListener("mousedown" , setActive, false);
     d.body.addEventListener("touchstart", setActive, false);
+    d.body.addEventListener("touchmove", clearActive, false);
 })(document, "active");
