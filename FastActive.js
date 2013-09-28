@@ -1,17 +1,18 @@
-(function (d, c) {
-    var activeClass = c || "active";
+(function (d, activeClass) {
+    var activeLink = false;
     function clearActive() {
-        var actives = d.querySelectorAll("." + activeClass);
-        for (var i = 0; i < actives.length; i++) {
-            actives[i].classList.remove(activeClass);
+        if (activeLink) {
+            activeLink.classList.remove(activeClass);
+            activeLink = false;
         }
     }
     function setActive(e) {
         clearActive();
         if (e.target.tagName == "A") {
+            activeLink = e.target;
             e.target.classList.add(activeClass);
         }
     }
     d.body.addEventListener("touchstart", setActive, false);
-    // d.body.addEventListener("touchmove", clearActive, false);
+    d.body.addEventListener("touchmove", clearActive, false);
 })(document, "active");
