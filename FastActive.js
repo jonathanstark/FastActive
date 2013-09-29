@@ -1,23 +1,24 @@
 (function (d, activeClass) {
-    function clearActive() {
-        if (activeElement) {
-            activeElement.classList.remove(activeClass);
-            activeElement = false;
-        }
-    }
-    function setActive(e) {
-        clearActive();
-        if (e.target.tagName == 'A') {
-            activeElement = e.target;
-            e.target.classList.add(activeClass);
-        }
-    }
-    var activeElement = false;
-    if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-        document.documentElement.classList.add('touch');
+    var hasTouch = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
+    if (!hasTouch) {
+        d.documentElement.classList.add('no-touch');
     } else {
-        document.documentElement.classList.add('no-touch');
+        function clearActive() {
+            if (activeElement) {
+                activeElement.classList.remove(activeClass);
+                activeElement = false;
+            }
+        }
+        function setActive(e) {
+            clearActive();
+            if (e.target.tagName == 'A') {
+                activeElement = e.target;
+                activeElement.classList.add(activeClass);
+            }
+        }
+        var activeElement = false;
+        d.documentElement.classList.add('touch');
+        d.body.addEventListener('touchstart', setActive, false);
+        d.body.addEventListener('touchmove', clearActive, false);
     }
-    d.body.addEventListener('touchstart', setActive, false);
-    d.body.addEventListener('touchmove', clearActive, false);
 })(document, 'active');
