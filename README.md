@@ -81,5 +81,5 @@ Cheers!
 
 For more info about the reasoning behind FastActive, please listen to [Episode 76 of the Nitch Podcast](http://nitch.cc/podcast/episode-76-tickle-class).
 
-Thanks to [@paul_irish](https://twitter.com/paul_irish) for pointing me at [this excellent post](http://www.gauntface.co.uk/blog/2013/06/25/touch-feedback-for-mobile-sites/) by [@gauntface](https://twitter.com/gauntface) who deconstructs the issues involved with both videos, demos, and interactive code examples. 
+Thanks to [@paul_irish](https://twitter.com/paul_irish) for pointing me at [this excellent post](http://www.gauntface.co.uk/blog/2013/06/25/touch-feedback-for-mobile-sites/) by [@gauntface](https://twitter.com/gauntface) who deconstructs the issues involved using videos, demos, and interactive code examples. Great stuff!
 
