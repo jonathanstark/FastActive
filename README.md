@@ -38,9 +38,9 @@ The goal of FastActive is to make it simple for web developers to add instantane
 
 Alternatively, you can just paste the FastActive source into a script tag at the bottom of your HTML pages to save yourself an HTTP request. 
 
-Once you have added FastActive to your site, all it does is add a `active` class instantly (ontouchstart) to any tapped link. Therefore, you're going to want to make a couple changes to your CSS: 
+Once you have added FastActive to your site, all it does is add and remove class names. It's up to you to create CSS rules that style the active links appropriately. Here are some suggestions:
 
-1. Disable default touch browser tap highlights, like so:
+* Disable default touch browser tap highlights, like so:
 
     ```
     a {
@@ -48,15 +48,24 @@ Once you have added FastActive to your site, all it does is add a `active` class
     }
     ```
 
-2. Add distinct visual styles for any `a.active` elements, like so:
+* Add distinct visual styles for any `a.active` elements, like so:
 
     ```
     a.active {
-        background-color: magenta;
+        background-color: darkmagenta;
         color: white;
     }
     ```
     
+* Limit hover styles to desktop browsers, like so:
+
+    ```
+    .no-touch a:hover {
+        background-color: magenta;
+        color: white;
+    }
+    ```
+
 __NOTE:__ You can change the class name from the default of `active` to whatever you like by editing the second param passed into the immediately invoked function expression (see the last line of the unminified snippet).
 
 ## More Info
@@ -64,5 +73,4 @@ __NOTE:__ You can change the class name from the default of `active` to whatever
 For more info about the reasoning behind FastActive, please listen to [Episode 76 of the Nitch Podcast](http://nitch.cc/podcast/episode-76-tickle-class).
 
 Thanks to [@paul_irish](https://twitter.com/paul_irish) for pointing me at [this excellent post](http://www.gauntface.co.uk/blog/2013/06/25/touch-feedback-for-mobile-sites/) by [@gauntface](https://twitter.com/gauntface) who deconstructs the issues involved with both videos, demos, and interactive code examples. 
-
 
