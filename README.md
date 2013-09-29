@@ -1,7 +1,7 @@
 FastActive
 ==========
 
-In my experience, a big reason that web apps feel slower than native is *not* that  that web based interfaces actually take longer to respond to user interaction, but that *they don't provide instant visual feedback to touch interactions.* 
+In my experience, a big reason that web apps feel slower than native is *not* that web based interfaces actually take longer to respond to user interaction, but that *they don't provide instant and predictable visual feedback to touch interactions.* 
 
 If you watch for it, you'll see that it's not uncommon to wait for a second or two for an action to complete in a native iOS app (e.g., tapping a list item in the Settings app, for example, can take a while to actually complete the navigation to the target screen). The difference, however, is that in a native app, the UI *instantly* lets the user know that the tap was registered by providing visual feedback. This has the effect of reassuring the user that "Yes, we received your request and are working on it as fast as we can." 
 
