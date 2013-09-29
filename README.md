@@ -1,7 +1,7 @@
 FastActive
 ==========
 
-__FastActive is a javascript snippet that makes websites and web apps feel as responsive as native apps on touch devices.__
+FastActive is a javascript snippet that makes websites and web apps feel as responsive as native apps on touch devices.
 
 ## Project Goals
 
@@ -16,11 +16,9 @@ The goal of FastActive is to make it simple for web developers to add instantane
 
 ## Usage
 
-1. Place a copy of FastActive.min.js on your web server.
-2. Link to your copy of FastActive.min.js just before the the closing body tag of your HTML pages. 
-3. There is no step 3!
+For best results, paste the FastActive source into a script tag at the bottom of your HTML page right before the closing body tag. See the bottom of the page source here for an example:
 
-Alternatively, you can just paste the FastActive source into a script tag at the bottom of your HTML pages to save yourself an HTTP request. 
+[jonathanstark.com](http://jonathanstark.com/)
 
 Once you have added FastActive to your site, all it does is add and remove class names. It's up to you to create CSS rules that style the active links appropriately. Here are some suggestions:
 
@@ -50,7 +48,7 @@ Once you have added FastActive to your site, all it does is add and remove class
     }
     ```
     
-* Limit `:hover` and `:active` pseudo class styles to desktop browsers, like so:
+* The `:hover` and `:active` pseudo class selectors are extremely unpredictable in touch browsers. To limit your `:hover` and `:active` style rules to desktop browsers, prepend the selectors with the `.no-touch` class selector, like so:
 
     ```
     .no-touch a:hover {
