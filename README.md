@@ -16,9 +16,7 @@ The goal of FastActive is to make it simple for web developers to add instantane
 
 ## Usage
 
-For best results, paste the FastActive source into a script tag at the bottom of your HTML page right before the closing body tag. See the bottom of the page source here for an example:
-
-[jonathanstark.com](http://jonathanstark.com/)
+For best results, paste the FastActive source into a script tag at the bottom of your HTML page right before the closing body tag. View source at the bottom of [this page](http://jonathanstark.com/) for an example.
 
 Once you have added FastActive to your site, all it does is add and remove class names. It's up to you to create CSS rules that style the active links appropriately. Here are some suggestions:
 
