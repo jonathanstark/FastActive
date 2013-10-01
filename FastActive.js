@@ -1,24 +1,25 @@
-(function (d, activeClass) {
-    var hasTouch = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
+(function (d, w, activeClass) {
+    var hasTouch = (('ontouchstart' in w) || w.DocumentTouch && d instanceof DocumentTouch);
     if (!hasTouch) {
         d.documentElement.classList.add('no-touch');
     } else {
-        function clearActive() {
-            if (activeElement) {
-                activeElement.classList.remove(activeClass);
-                activeElement = false;
-            }
-        }
-        function setActive(e) {
-            clearActive();
-            if (e.target.tagName == 'A') {
-                activeElement = e.target;
-                activeElement.classList.add(activeClass);
-            }
-        }
-        var activeElement = false;
+        var activeElement = null,
+            clearActive = function() {
+                if (activeElement) {
+                    activeElement.classList.remove(activeClass);
+                    activeElement = false;
+                }
+            },
+            setActive = function(e) {
+                clearActive();
+                if (e.target.tagName == 'A') {
+                    activeElement = e.target;
+                    activeElement.classList.add(activeClass);
+                }
+            };
+        
         d.documentElement.classList.add('touch');
         d.body.addEventListener('touchstart', setActive, false);
         d.body.addEventListener('touchmove', clearActive, false);
     }
-})(document, 'active');
+})(document, window, 'active');
