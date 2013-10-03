@@ -5,7 +5,7 @@ FastActive is a javascript snippet that makes websites and web apps feel as resp
 
 ## Project Goals
 
-The goal of FastActive is to make it simple for web developers to add instantaneous visual feedback for touch interactions to their websites and web apps. 
+The goal of FastActive is to make it simple for web developers to add instantaneous visual feedback for touch interactions to their websites and web apps with a minuscule amout of javascript. 
 
 ## Features
 
