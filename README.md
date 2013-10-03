@@ -5,7 +5,7 @@ FastActive is a javascript snippet that makes websites and web apps feel as resp
 
 ## Project Goals
 
-The goal of FastActive is to make it simple for web developers to add instantaneous visual feedback for touch interactions to their websites and web apps with a minuscule amout of javascript. 
+The goal of FastActive is to make it simple for web developers to add instantaneous visual feedback for touch interactions to their websites and web apps with a minuscule amount of javascript. 
 
 ## Features
 
@@ -77,6 +77,12 @@ To date, FastActive has been tested in two simple websites, one simple web app, 
 Cheers!
 
 [Jonathan Stark](http://jonathanstark.com)
+
+## Caveats
+
+[@RickByers](https://twitter.com/RickByers) (Google dev working on Chrome and ChromeOS) pointed out on Twitter that listening to touch events can impose a performance penalty on page scrolling. It's pretty complicated but he does a great job explaining it [here](https://plus.google.com/app/basic/stream/z12oxpsjztabz1wip04cepebireehbbaltc0k). 
+
+I haven't experienced any scroll jankiness myself but YMMV. PLMK if you do notice performance problems and I'll take a look at your page to see if there's something I can to do optimize the FastActive code. 
 
 ## More Info
 
