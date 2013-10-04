@@ -17,7 +17,6 @@
                     activeElement.classList.add(activeClass);
                 }
             };
-        
         d.documentElement.classList.add('touch');
         d.body.addEventListener('touchstart', setActive, false);
         d.body.addEventListener('touchmove', clearActive, false);
