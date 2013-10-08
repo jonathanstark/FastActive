@@ -7,7 +7,7 @@
             clearActive = function() {
                 if (activeElement) {
                     activeElement.classList.remove(activeClass);
-                    activeElement = false;
+                    activeElement = null;
                 }
             },
             setActive = function(e) {
