@@ -1,6 +1,6 @@
 (function (d, w, activeClass) {
     var hasTouch = (('ontouchstart' in w) || w.DocumentTouch && d instanceof DocumentTouch);
-    if (!hasTouch && (' ' + d.documentElement.className + ' ').indexOf(' no-touch ') < 0) {
+    if (!hasTouch) {
         d.documentElement.className += ' no-touch';
     } else {
         var activeElement = null,
