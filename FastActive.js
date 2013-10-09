@@ -1,8 +1,7 @@
 (function (d, w, activeClass) {
-    var hasTouch = (('ontouchstart' in w) || w.DocumentTouch && d instanceof DocumentTouch),
-        docClass = d.documentElement.className;
-    if (!hasTouch && (' '+docClass+' ').indexOf(' no-touch ') < 0) {
-        d.documentElement.className += (docClass!=''?' ':'')+'no-touch';
+    var hasTouch = (('ontouchstart' in w) || w.DocumentTouch && d instanceof DocumentTouch);
+    if (!hasTouch && (' ' + d.documentElement.className + ' ').indexOf(' no-touch ') < 0) {
+        d.documentElement.className += ' no-touch';
     } else {
         var activeElement = null,
             clearActive = function() {
@@ -19,6 +18,7 @@
                 }
             };
         d.documentElement.classList.add('touch');
+        d.documentElement.classList.remove('no-touch');
         d.body.addEventListener('touchstart', setActive, false);
         d.body.addEventListener('touchmove', clearActive, false);
     }
