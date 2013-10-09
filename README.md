@@ -60,7 +60,7 @@ Once you have added FastActive to your site, all it does is add and remove class
     }
     ```
 
-__NOTE:__ You can change the class name from the default of `active` to whatever you like by editing the second param passed into the immediately invoked function expression (see the last line of the unminified snippet).
+__NOTE:__ You can change the class name from the default of `active` to whatever you like by editing the third param passed into the immediately invoked function expression (see the last line of the unminified snippet).
 
 ## Discussion 
 
