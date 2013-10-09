@@ -10,7 +10,7 @@ The goal of FastActive is to make it simple for web developers to add instantane
 ## Features
 
 * Paste and done: you don't write any javascript!
-* Ultra-lightweight: __280 bytes gzipped (516 bytes uncompressed)__!
+* Ultra-lightweight: __516 bytes minified (280 bytes gzipped)!__
 * MIT license: use it _wherever you want_.
 * Responsive design friendly: safe for use in cross-device development.
 * Framework-independent: use with any JS library, or none at all!
