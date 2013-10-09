@@ -2,7 +2,7 @@
     var hasTouch = (('ontouchstart' in w) || w.DocumentTouch && d instanceof DocumentTouch),
         docClass = d.documentElement.className;
     if (!hasTouch && (' '+docClass+' ').indexOf(' no-touch ') < 0) {
-        d.documentElement.className += (docClass.length?' ':'')+'no-touch';
+        d.documentElement.className += (docClass!=''?' ':'')+'no-touch';
     } else {
         var activeElement = null,
             clearActive = function() {
