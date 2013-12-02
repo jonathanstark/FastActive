@@ -1,4 +1,4 @@
-(function (d, w, activeClass, targetTagNames) {
+(function (d, w, fastActiveClassName, isFastActiveTarget) {
     var hasTouch = (('ontouchstart' in w) || w.DocumentTouch && d instanceof DocumentTouch);
     if (!hasTouch) {
         d.documentElement.className += ' no-touch';
@@ -6,15 +6,15 @@
         var activeElement = null,
             clearActive = function() {
                 if (activeElement) {
-                    activeElement.classList.remove(activeClass);
+                    activeElement.classList.remove(fastActiveClassName);
                     activeElement = null;
                 }
             },
             setActive = function(e) {
                 clearActive();
-                if (targetTagNames.indexOf(e.target.tagName) > -1) {
+                if (isFastActiveTarget(e)) {
                     activeElement = e.target;
-                    activeElement.classList.add(activeClass);
+                    activeElement.classList.add(fastActiveClassName);
                 }
             };
         d.documentElement.classList.add('touch');
@@ -22,4 +22,6 @@
         d.body.addEventListener('touchstart', setActive, false);
         d.body.addEventListener('touchmove', clearActive, false);
     }
-})(document, window, 'active', ['A', 'INPUT']);
+})(document, window, 'active', function(e){
+    return ['A', 'INPUT'].indexOf(e.target.tagName) > -1; // Put your conditional logic here
+});
