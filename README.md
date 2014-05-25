@@ -10,14 +10,14 @@ The goal of FastActive is to make it simple for web developers to add instantane
 ## Features
 
 * Paste and done: you don't write any javascript!
-* Ultra-lightweight: __363 bytes (247 bytes gzipped bytes gzipped)!__
-* MIT license: use it _wherever you want_.
+* Ultra-lightweight: 363 bytes __(247 bytes gzipped)!__
+* MIT license: _use it wherever you want_.
 * Responsive design friendly: safe for use in cross-device development.
 * Framework-independent: use with any JS library, or none at all!
 
 ## Usage
 
-For best results, paste the FastActive source into a script tag at the bottom of your HTML page right before the closing body tag. View source at the bottom of [this page](http://jonathanstark.com/) for an example.
+Paste the FastActive source into a script tag at the bottom of your HTML page right before the closing body tag. View source at the bottom of [this page](http://jonathanstark.com/) for an example.
 
 Once you have added FastActive to your site, all it does is add and remove class names. It's up to you to create CSS rules that style the active links appropriately. Here are some suggestions:
 
@@ -47,7 +47,7 @@ Once you have added FastActive to your site, all it does is add and remove class
     }
     ```
 
-* The `:hover` and `:active` pseudo class selectors are extremely unpredictable in touch browsers. To limit your `:hover` and `:active` style rules to desktop browsers, prepend the selectors with the `.no-touch` class selector, like so:
+* The `:hover` and `:active` pseudo class selectors are unpredictable in touch browsers. To limit your `:hover` and `:active` style rules to desktop browsers, include [modernizr.js](http://modernizr.com/) in your page and prepend your CSS selectors with the `.no-touch` class selector, like so:
 
     ```
     .no-touch a:hover {
